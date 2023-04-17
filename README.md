@@ -5,25 +5,6 @@ Hospital app
 
 
 ## HTTP Verbs
-| HTTP METHOD | URL             | Payload | Description                  |
-|-------------|-----------------|---------|------------------------------|
-| GET         | /users/:user_id | {id: 2} | test test test test                      |
-| GET         | /books          | {}      | testtesttesttesttest |
-|             |                 |         |                      |
-|             |                 |         |                      |
-|             |                 |         |                      |
-|             |                 |         |                      |
-|             |                 |         |                      |
-|             |                 |         |                      |
-|             |                 |         |                      |
-|             |                 |         |                      |
-|             |                 |         |                      |
-|             |                 |         |                      |
-|             |                 |         |                      |
-|             |                 |         |                      |
-|             |                 |         |                      |
-|             |                 |         |                      |
-
 
 
 ![img_2.png](img_2.png)
