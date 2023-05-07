@@ -1,8 +1,8 @@
 class Doctor < ApplicationRecord
   has_one :otdelenie
   has_one :special
-  @name
-  @stag
+  validates :stag, presence: true
+  validates :name, presence: true
   def self.find_special(id)
     ActiveRecord::Base.connection.execute("SELECT * FROM specials WHERE doctor_id = #{id}")
   end

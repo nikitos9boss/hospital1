@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'home/index'
+  get '/index', to: 'home#index'
+  get '/', to: 'home#index'
+  devise_for :users
   resources :card_pacients
   resources :doctors
   resources :pacients
@@ -10,5 +14,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   #
-
+  devise_scope :user do
+    get '/users/sign_out', to: 'devise/sessions#destroy'
+  end
 end

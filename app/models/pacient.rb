@@ -1,6 +1,6 @@
 class Pacient < ApplicationRecord
   has_one :cardPacient
-  @name
+  validates :name, presence: true
   def self.find_card_pacient(id)
     ActiveRecord::Base.connection.execute("SELECT * FROM card_pacients WHERE pacient_id = #{id}")
   end

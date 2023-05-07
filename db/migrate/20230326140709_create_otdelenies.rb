@@ -5,6 +5,8 @@ class CreateOtdelenies < ActiveRecord::Migration[7.0]
       t.belongs_to :doctor
       t.string :name
       t.timestamps
+      t.references :clinic, foreign_key: true
+      t.references :doctor, foreign_key: true
     end
   end
 end
