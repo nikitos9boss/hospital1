@@ -1,0 +1,20 @@
+<h1>Home#index</h1>
+<h1>Find me in app/views/home/index.html.erb</h1>
+
+<div>
+  <%= link_to "Sign in", new_user_session_path %>
+  <tr></tr>
+  <%= link_to "Sign up", new_user_registration_path %>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <%= link_to "Card Pacients", card_pacients_path, class: "btn" %>
+    <%= link_to "Pacients", pacients_path, class: "btn " %>
+    <%= link_to "Doctors", doctors_path, class: "btn " %>
+  </div>
+  <div class="col-md-6">
+    <%= link_to "Specials", specials_path, class: "btn " %>
+    <%= link_to "Otdelenies", otdelenies_path, class: "btn " %>
+    <%= link_to "Clinics", clinics_path, class: "btn" %>
+  </div>
+</div>

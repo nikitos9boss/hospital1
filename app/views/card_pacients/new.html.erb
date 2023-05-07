@@ -1,0 +1,30 @@
+<h1>New card pacient</h1>
+<%= form_with model: @cardPacient do |form| %>
+
+  <div class="pole">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+
+  <div class="pole">
+    <%= form.label :pacient_id %>
+    <%= form.collection_select :pacient_id, Pacient.all, :id, :name, { prompt: 'Выберите Pacient' } %>
+  </div>
+
+  <div class="pole">
+    <%= form.label :clinic_id %>
+    <%= form.collection_select :clinic_id, Clinic.all, :id, :name, { prompt: 'Выберите Clinic' } %>
+  </div>
+
+
+  <div class="send">
+    <%= form.submit %>
+  </div>
+
+<% end %>
+<br>
+
+<div>
+  <%= link_to "Back to card pacients", card_pacients_path %>
+</div>

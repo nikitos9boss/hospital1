@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<h1><%= @doctor.name %>  </h1>
+<h1><%= @doctor.stag %>  </h1>
+
+
+
+<div>
+  <%= link_to "Edit this doctor", edit_doctor_path(@doctor) %> |
+  <%= link_to "Back to doctors", doctors_path %>
+
+  <%= button_to "Destroy this doctor", @doctor, method: :delete %>
+</div>

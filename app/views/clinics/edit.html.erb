@@ -1,0 +1,27 @@
+<h1>Editing clinic</h1>
+
+
+<%= form_with model: @clinic, method: :patch do |form| %>
+
+  <div class="pole">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div class="pole1">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+
+
+  <div class="send">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<br>
+
+<div>
+  <%= link_to "Show this clinic", @clinic %> |
+  <%= link_to "Back to clinics", clinics_path %>
+</div>

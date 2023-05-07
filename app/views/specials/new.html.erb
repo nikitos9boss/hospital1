@@ -1,0 +1,25 @@
+<h1>New special</h1>
+
+<%= form_with model: @special do |form| %>
+
+  <div class="pole">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+
+  <div class="pole">
+    <%= form.label :doctor_id %>
+    <%= form.collection_select :doctor_id, Doctor.all, :id, :name, { prompt: 'Выберите Doctor' } %>
+  </div>
+
+  <div class="send">
+    <%= form.submit %>
+  </div>
+
+<% end %>
+<br>
+
+<div>
+  <%= link_to "Back to specials", specials_path %>
+</div>

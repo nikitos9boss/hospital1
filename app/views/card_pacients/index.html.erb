@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Card pacients</h1>
+<table>
+  <thead>
+  <tr>
+    <th>name</th>
+    <th colspan="2"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @cardPacients.each do |cardPacient| %>
+    <tr>
+      <td><%= cardPacient.name %></td>
+      <td><%= link_to 'показать', cardPacient %></td>
+      <td><%= link_to 'редактировать', edit_card_pacient_path(cardPacient) %></td>
+      <td><%= link_to 'удалить', cardPacient, method: :delete %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New card pacient", new_card_pacient_path %>

@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+
+<h1><%= @otdilenie.name %> </h1>
+
+<h1><%= @doctor.name %> </h1>
+<h1><%= @clinic.name %> </h1>
+
+
+
+<div>
+  <%= link_to "Edit this otdeleny", edit_otdeleny_path(@otdilenie) %>
+  <%= link_to "Back to otdelenies", otdelenies_path %>
+
+  <%= button_to "Destroy this otdeleny", @otdilenie, method: :delete %>
+</div>

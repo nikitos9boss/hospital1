@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Specials</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>name</th>
+    <th colspan="2"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @specials.each do |special| %>
+    <tr>
+      <td><%= special.name %></td>
+      <td><%= link_to 'показать', special %></td>
+      <td><%= link_to 'редактировать', edit_special_path(special) %></td>
+      <td><%= link_to 'удалить', special, method: :delete %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New special", new_special_path %>

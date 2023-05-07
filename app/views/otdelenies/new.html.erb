@@ -1,0 +1,29 @@
+<h1>New otdeleny</h1>
+
+<%= form_with model: @otdilenie do |form| %>
+
+  <div class="pole">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="pole">
+    <%= form.label :clinic_id %>
+    <%= form.collection_select :clinic_id, Clinic.all, :id, :name, { prompt: 'Выберите Clinic' } %>
+  </div>
+
+  <div class="pole">
+    <%= form.label :doctor_id %>
+    <%= form.collection_select :doctor_id, Doctor.all, :id, :name, { prompt: 'Выберите Doctor' } %>
+  </div>
+
+  <div class="send">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<br>
+
+<div>
+  <%= link_to "Back to otdelenies", otdelenies_path %>
+</div>

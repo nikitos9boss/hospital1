@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Otdelenie</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>name</th>
+    <th colspan="2"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @otdilenies.each do |otdelenie| %>
+    <tr>
+      <td><%= otdelenie.name %></td>
+      <td><%= link_to 'показать', otdelenie %></td>
+      <td><%= link_to 'редактировать', edit_otdeleny_path(otdelenie) %></td>
+      <td><%= link_to 'удалить', otdelenie, method: :delete %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<%= link_to "New otdeleny", new_otdeleny_path %>

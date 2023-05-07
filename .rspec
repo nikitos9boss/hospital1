@@ -1,0 +1,20 @@
+--require spec_helper
+require 'rails_helper'
+
+RSpec.describe Clinic, type: :model do
+  it "has name and address attributes" do
+    clinic = Clinic.new
+    expect(clinic).to respond_to(:name)
+    expect(clinic).to respond_to(:address)
+  end
+
+  it "has many otdelenie" do
+    clinic = Clinic.new
+    expect(clinic).to have_many(:otdelenie)
+  end
+
+  it "has many cardPacient" do
+    clinic = Clinic.new
+    expect(clinic).to have_many(:cardPacient)
+  end
+end

@@ -1,0 +1,27 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Doctors</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>name</th>
+    <th>stag</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @doctors.each do |doctor| %>
+    <tr>
+      <td><%= doctor.name %></td>
+      <td><%= doctor.stag %></td>
+      <td><%= link_to 'показать', doctor %></td>
+      <td><%= link_to 'редактировать', edit_doctor_path(doctor) %></td>
+      <td><%= link_to 'удалить', doctor, method: :delete %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New doctor", new_doctor_path %>

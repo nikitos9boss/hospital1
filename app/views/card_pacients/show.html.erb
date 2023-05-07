@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+
+<h1><%= @cardPacient.name %> </h1>
+
+<h1><%= @pacient.name %> </h1>
+<h1><%= @clinic.name %> </h1>
+
+
+
+<div>
+  <%= link_to "Edit this card pacient", edit_card_pacient_path(@cardPacient) %> |
+  <%= link_to "Back to card pacients", card_pacients_path %>
+
+  <%= button_to "Destroy this card pacient", @cardPacient, method: :delete %>
+</div>

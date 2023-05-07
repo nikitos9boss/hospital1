@@ -1,0 +1,21 @@
+<h1>Editing pacient</h1>
+
+<%= form_with model: @pacient, method: :patch do |form| %>
+
+  <div class="pole">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+
+  <div class="send">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<br>
+
+<div>
+  <%= link_to "Show this pacient", @pacient %> |
+  <%= link_to "Back to pacients", pacients_path %>
+</div>
