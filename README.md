@@ -16,7 +16,7 @@ Hospital app
 
 
 ## ERD diagram
-![img_1.png](img_1.png)
+![img_9.png](img_9.png)
 
 ### Labs
 [ ] Task 1 -> Клиники (поля на выбор)
