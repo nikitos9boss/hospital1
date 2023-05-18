@@ -1,6 +1,7 @@
 class Special < ApplicationRecord
   belongs_to :doctor
   @name
+  paginates_per 14
   def self.find_doctor(id)
     tmp = ActiveRecord::Base.connection.execute("SELECT * FROM specials WHERE id = #{id}")[0]
     ActiveRecord::Base.connection.execute("SELECT * FROM doctors WHERE id = #{tmp['doctor_id']}")

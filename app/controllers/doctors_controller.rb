@@ -22,6 +22,7 @@ class DoctorsController < ApplicationController
 
     def index
       @doctors =  Doctor.all
+      @doctors = Doctor.order(:id).page params[:page]
     end
 
     def destroy

@@ -6,7 +6,9 @@
   <thead>
   <tr>
     <th>name</th>
-    <th colspan="2"></th>
+    <th>Show</th>
+    <th>Edit</th>
+    <th>Delete</th>
   </tr>
   </thead>
 
@@ -22,3 +24,5 @@
   </tbody>
 </table>
 <%= link_to "New otdeleny", new_otdeleny_path %>
+<br><br>
+<%= paginate @otdilenies %>

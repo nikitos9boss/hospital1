@@ -23,7 +23,14 @@ class PacientsController < ApplicationController
     end
 
     def index
-      @pacients = Pacient.all
+      #@pacients = Pacient.all
+      #@pacients = Pacient.order(:id).page params[:page]
+
+      @query = PacientQuery.new(Pacient.all)
+      @query = @query.call(params)
+      @pacients = Kaminari.paginate_array(@query).page(params[:page]).per(14)
+
+      #@clinics = Clinic.order(:id).page params[:page]
     end
 
     def destroy

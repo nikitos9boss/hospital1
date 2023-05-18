@@ -6,7 +6,9 @@
   <thead>
   <tr>
     <th>name</th>
-    <th colspan="2"></th>
+    <th>Show</th>
+    <th>Edit</th>
+    <th>Delete</th>
   </tr>
   </thead>
 
@@ -23,3 +25,5 @@
 </table>
 
 <%= link_to "New special", new_special_path %>
+<br><br>
+<%= paginate @specials %>

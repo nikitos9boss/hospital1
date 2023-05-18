@@ -23,7 +23,8 @@ class OtdeleniesController < ApplicationController
     end
 
     def index
-      @otdilenies = Otdelenie.all
+      #@otdilenies = Otdelenie.all
+      @otdilenies = Otdelenie.order(:id).page params[:page]
     end
 
     def destroy

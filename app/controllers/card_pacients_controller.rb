@@ -23,7 +23,8 @@ class CardPacientsController < ApplicationController
     end
 
     def index
-      @cardPacients = CardPacient.all
+      #@cardPacients = CardPacient.all
+      @cardPacients = CardPacient.order(:id).page params[:page]
     end
 
     def destroy

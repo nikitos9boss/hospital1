@@ -1,9 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<h1><%= @pacient.name %>  </h1>
-<h1><%= @card_pacient.name %>  </h1>
+<h1>name = <%= @pacient.name %>  </h1>
+<h1>card_pacient = <%= @card_pacient.name %>  </h1>
 
-
+<h1>age = <%= @pacient.age %>  </h1>
+<h1> number = <%= @pacient.number %>  </h1>
 <div>
   <%= link_to "Edit this pacient", edit_pacient_path(@pacient) %> |
   <%= link_to "Back to pacients", pacients_path %>

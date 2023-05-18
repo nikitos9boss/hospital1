@@ -10,14 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_07_160632) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_14_174350) do
   create_table "card_pacients", force: :cascade do |t|
     t.integer "clinic_id"
     t.integer "pacient_id"
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "doctor_id"
     t.index ["clinic_id"], name: "index_card_pacients_on_clinic_id"
+    t.index ["doctor_id"], name: "index_card_pacients_on_doctor_id"
     t.index ["pacient_id"], name: "index_card_pacients_on_pacient_id"
   end
 
@@ -26,6 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_07_160632) do
     t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "year"
   end
 
   create_table "doctors", force: :cascade do |t|
@@ -49,6 +52,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_07_160632) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "age"
+    t.integer "number"
   end
 
   create_table "specials", force: :cascade do |t|
@@ -72,6 +77,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_07_160632) do
   end
 
   add_foreign_key "card_pacients", "clinics"
+  add_foreign_key "card_pacients", "doctors"
   add_foreign_key "card_pacients", "pacients"
   add_foreign_key "specials", "doctors"
 end

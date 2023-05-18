@@ -1,8 +1,10 @@
 class Doctor < ApplicationRecord
   has_one :otdelenie
   has_one :special
+  has_many :cardPacient
   validates :stag, presence: true
   validates :name, presence: true
+  paginates_per 14
   def self.find_special(id)
     ActiveRecord::Base.connection.execute("SELECT * FROM specials WHERE doctor_id = #{id}")
   end

@@ -1,3 +1,5 @@
+require_relative '../queries/ClinicQuery'
+require 'kaminari'
 class ClinicsController < ApplicationController
   before_action :authenticate_user!
   def new
@@ -21,7 +23,14 @@ class ClinicsController < ApplicationController
   end
 
   def index
-    @clinics = Clinic.all
+    #@clinics = Clinic.all
+    @query = ClinicQuery.new(Clinic.all)
+    @query = @query.call(params)
+
+
+    @clinics = Kaminari.paginate_array(@query).page(params[:page]).per(14)
+    #@clinics = Clinic.order(:id).page params[:page]
+
   end
 
   def destroy

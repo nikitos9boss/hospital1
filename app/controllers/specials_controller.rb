@@ -23,6 +23,7 @@ class SpecialsController < ApplicationController
 
     def index
       @specials = Special.all
+      @specials = Special.order(:id).page params[:page]
     end
 
     def destroy

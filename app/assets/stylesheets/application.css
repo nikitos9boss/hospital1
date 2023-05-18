@@ -2,6 +2,7 @@
 body {
     background-color: black;
     color: green; /* сохраняем зеленый цвет для текста */
+    text-align: center;
 }
 
 a {
@@ -9,8 +10,24 @@ a {
 }
 table {
     background-color: black;
-    color: white;
+    color: green;
+    margin: 0 auto; /* центрируем таблицу по горизонтали */
+    border-collapse: collapse; /* объединяем границы ячеек */
+    width: 100%; /* устанавливаем ширину таблицы */
 }
+
+th, td {
+    padding: 8px; /* устанавливаем отступы в ячейках */
+    text-align: left; /* выравниваем текст по левому краю */
+    border-bottom: 3px solid rgba(52, 52, 52, 0.66); /* добавляем полоски между ячейками */
+    border-right: 3px solid rgba(52, 52, 52, 0.66); /* добавляем вертикальную полосу после каждой колонки */
+    border-left: 3px solid rgba(52, 52, 52, 0.66);
+    border-top: 3px solid rgba(52, 52, 52, 0.66);
+    border-color: #2a2a2a;
+}
+
+
+
 
 .pole input[type="text"] {
     background-color: #2c2d38;
