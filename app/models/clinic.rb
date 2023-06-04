@@ -5,6 +5,9 @@ class Clinic < ApplicationRecord
   validates :address, presence: true
   validates :name, presence: true
   validates :year, presence: true
+  attribute :typeClinic, :string
+  attribute :city, :string
+  attribute :ratingMortality, :string
   paginates_per 14
   def count_doctors()
     otdelenie.joins(:doctor).count
